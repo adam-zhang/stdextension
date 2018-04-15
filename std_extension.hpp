@@ -22,3 +22,10 @@ bool end_with(const std::basic_string<CharT>& source, const std::basic_string<Ch
             return false;
     return true;
 }
+
+inline template<typename ContainerA, typename ContainerB>
+bool copy(ContainerA& containerA, ContainerB& containerB)
+{
+	copy(containerA.begin(), containerA.end(), containerB.begin());
+}
+
