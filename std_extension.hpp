@@ -35,11 +35,21 @@ template<typename CharT = char>
 std::basic_string<CharT> tolower(const std::basic_string<CharT>& source)
 {
 	auto s(source);
-	transform(source.begin(), source.end(), s.begin(), [](char c)
+	transform(source.begin(), source.end(), s.begin(), [](CharT c)
 			{
 				return tolower(c);
 			});
 	return s;
+}
+
+template<typename CharT = char>
+std::basic_string<CharT> toupper(const std::basic_string<CharT>& source)
+{
+	auto s(source);
+	transform(source.begin(), sources.end(), s.begin(), [](CharT c)
+			{
+				return toupper(c);
+			});
 }
 
 //template<>
