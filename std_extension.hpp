@@ -52,15 +52,6 @@ std::basic_string<CharT> toupper(const std::basic_string<CharT>& source)
 			});
 }
 
-//template<>
-//std::basic_string<wchar_t> tolower<wchar_t>(const std::basic_string<wchar_t> source)
-//{
-//	auto s(sources);
-//	transform(sources.begin(), sources.end(), s.begin(), [](wchar_t c)
-//			{
-//				return towlower(c);
-//			});
-//}
 
 
 template<typename CharT = char>
@@ -68,6 +59,6 @@ inline bool icompare(const std::basic_string<CharT>& source1,
 		const std::basic_string<CharT>& source2)
 {
 	auto s1 = tolower(source1);
-	auto s2 = tolower(source1);
+	auto s2 = tolower(source2);
 	return s1 == s2;
 }
